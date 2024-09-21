@@ -1,0 +1,114 @@
+.layer{
+  height: fit-content;
+
+  .modal{
+    background: white;
+    max-width: 550px;
+
+    height: 780px; 
+    border-bottom-left-radius: 120px;
+    box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+    .modal-wrapper{
+      width: 80%; 
+     
+      padding: 50px;
+      .modal-title{
+        text-align: center;
+        font-size: 32px;
+      }
+      .modal-subtitle{
+        text-align: center;
+        margin-top: 25px;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+        .phone-container{
+          width: 100%;
+          height: 50px;        
+        }
+    
+        .modal-input{
+          height: 40px;
+          transition: 300ms all;
+          padding-left: 15px;
+          font-size: 18px;
+          border: 1px solid var(--secondary-color) !important;
+        
+      
+          &:focus{
+            color: var(--secondary-color);
+            border: 1px solid var(--primary-color) !important;
+            outline: none;
+            padding-left: 15px;
+          } 
+  
+        }
+        .modal-policy{
+          font-size: 14px;
+          color: var(--secondary-color);
+          margin-top: 15px;
+          text-align: center;
+        }
+  
+      }
+  
+    }
+    @media screen and (max-width: 1210px){
+      .modal-wrapper{
+        .modal-title{
+          font-size: 30px;
+        }
+        form{
+          .modal-policy{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+
+}
+
+
+.layer-active {
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgb(0, 0, 0, 0.4); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+
+}
+.modal-active{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  border-bottom-left-radius: 25px !important;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
+  animation: slideIn .3s ease-in-out;
+}
+
+
+@keyframes slideIn { 
+  0%{
+    top: 48%;
+    opacity: 0;
+
+  }
+  100%{
+   top: 50%;
+    opacity: 1;
+  }
+  
+}

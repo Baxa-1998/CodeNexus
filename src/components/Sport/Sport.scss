@@ -1,0 +1,65 @@
+.sport{
+  width: 100%;
+  min-height: 540px;
+  height: fit-content;
+  display: flex;
+  position: relative;
+
+ 
+ 
+  .sport-review{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+ 
+    width: 60%;
+    height: 540px;
+    background: var(--primary-color);
+
+    border-bottom-right-radius: 160px;
+    z-index: 2; 
+.sport-text-container{
+  width: 80%;
+ 
+      .sport-title{
+        color: white; 
+        
+      }
+      .sport-subtitle{
+        color: white; 
+      }
+      .sport-sign{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        .sport-line{
+          width: 60%; 
+          height: 2px;
+          background-color: white;
+        }
+        img{
+          border-radius: 50%;
+        }
+        .sport-avatar-bio{
+          color: white;
+          display: flex;
+          flex-direction: column;
+      
+          h3{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+   
+  }
+  .sport-background{
+   position: absolute;
+   object-fit: cover;
+   right: 0;
+   width: 50%;
+   height: 540px;
+  }
+}

@@ -1,0 +1,103 @@
+.sales{
+  padding-top: 50px; 
+  padding-bottom: 50px; 
+  .sales-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    height: fit-content;
+    gap: 50px;
+    margin: 0 auto;
+    .sales-customer{
+ 
+      // height: 700px;
+    
+      .sales-img{
+        position: relative;
+        width: 100%;
+        img{
+          width: 100%;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.81) 90.25%, rgba(255, 255, 255, 0.97) 90.08%);
+       
+        }
+
+        
+
+        // margin-left: 50%;
+        // transform: translate(-50%);
+      }
+      .sales-text-block{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
+        
+        .sales-title{
+          transform: translateY(-60px);
+         font-weight: 500;
+          text-transform: uppercase;
+          font-size: 36px;
+         }
+         .sales-subtitle{
+           font-size: 18px;
+          //  transform: translateY(0px);
+           line-height: 24px;
+         
+   
+         }
+
+      }
+   
+    
+    
+     
+
+      }
+      .sales-automate{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .sales-automate-text{
+          width: 40%;
+         
+        }
+        
+        .sales-automate-img{
+          width: 60%;
+          img{
+            width: 100%;
+          }
+         
+        }
+        .sales-btn{
+          width: 215px;
+          height: 62px;
+          border-radius: 50px;
+          border: none;
+          font-weight: 600;
+          font-size: 18px;
+          cursor: pointer;
+          background: var(--primary-color);
+          color: white;
+          margin-top: 25px;
+          transition: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
+          &:hover{
+            border: 1px solid var(--primary-color); 
+            background: white;
+            color: var(--primary-color);
+          }
+        }
+      }
+ 
+
+   
+    }
+  }

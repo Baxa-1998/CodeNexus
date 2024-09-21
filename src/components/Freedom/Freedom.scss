@@ -1,0 +1,56 @@
+.freedom{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .freedom-title{
+    text-align: center;
+    font-size: 40px;
+  }
+  .freedom-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: fit-content;
+    
+    margin: 0 auto;
+    margin-top: 50px;
+    .freedom-item{
+      width: 30%;
+      height: 700px;
+     border-radius: 15px;
+      padding-left: 25px;
+     padding-top: 25px;
+
+      h3{
+       font-size: 35px;
+       font-weight: 500;
+       
+
+      }
+      &:nth-child(1){
+
+        background: url('../../assets/crm-back.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover;
+      }
+      &:nth-child(2){
+     
+        background: url('../../assets/crm-back-2.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover;
+        color: white;
+        z-index: 5;
+      }
+      &:nth-child(3){
+     
+        background: url('../../assets/crm-back-3.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover;
+     
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

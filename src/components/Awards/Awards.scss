@@ -1,0 +1,75 @@
+.awards{ 
+  background:  rgba(73, 222, 255, 0.72);
+  padding: 50px;
+  .awards-wrapper {
+    width: 80%;
+    margin: 0% auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    color: #ffff;
+    .awards-title {
+      font-size: 35px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+    .awards-company{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      .award-items{
+        transition: 500ms ease;
+        .awards-subtitle{
+          
+          transition: 500ms ease;
+        }
+
+        .awards-logo{
+          height: 35px;
+        }
+      }
+
+    }
+   
+  }
+}
+
+
+.show {
+  animation: test2 1s linear 1;
+  transition: .5s ease-in;opacity: 1;
+}
+
+.hide{
+  animation: test 1s linear 1;
+  transition: .5s ease-in;
+}
+
+
+@keyframes test {
+  0%{
+    opacity: 100%;
+  }
+  50%{
+    opacity: 70%;
+  }
+  100%{
+    opacity: 50%;
+  }
+  
+}
+
+
+@keyframes test2 {
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 50%;
+  }
+  100%{
+    opacity: 100%;
+  }
+  
+}
+
