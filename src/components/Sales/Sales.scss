@@ -100,4 +100,17 @@
 
    
     }
+    @media screen and (max-width: 1366px){
+      .sales-wrapper {
+        .sales-customer {
+          .sales-img  {
+            img{
+              width: 80%; 
+              margin-left: 50%; 
+              transform: translate(-50%);
+            }
+          }
+        }
+      } 
+    }
   }

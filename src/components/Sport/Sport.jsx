@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sport.scss';
-import sport from '../../assets/Sport.png';
+import sport from '../../assets/Sport.webp';
 import avatar from '../../assets/avatar.png';
 import { useGSAP } from '@gsap/react';
 import Layer from '../Layer/Layer';

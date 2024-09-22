@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Main.scss';
 import logo from '../../assets/logo2.png';
-import dashboard from '../../assets/dashboard2.png';
+import dashboard from '../../assets/dashboard2.webp';
 import Modal from '../Modal/Modal';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';

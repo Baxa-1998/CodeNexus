@@ -5,7 +5,60 @@ import linkedin from '../../assets/socials/2.png';
 import youtube from '../../assets/socials/4.png';
 import twitter from '../../assets/socials/3.png';
 import './Footer.scss';
+import { ScrollTrigger } from 'gsap/all';
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(ScrollTrigger);
 export default function Footer() {
+  useGSAP(()=>{
+    gsap.fromTo('.footer-right',{
+      opacity: 0,
+      x: -500
+    }, 
+    {
+      opacity: 1, 
+      duration: 1,
+      ease: 'expo',
+      x: 0,
+      scrollTrigger: {
+        trigger: '.footer-right', 
+        start: '20% bottom'
+      }
+    }
+  
+  )
+  gsap.fromTo('.footer-left',{
+    opacity: 0,
+    x: 500
+  }, 
+  {
+    opacity: 1, 
+    duration: 1,
+    ease: 'expo',
+    x: 0,
+    scrollTrigger: {
+      trigger: '.footer-left', 
+      start: '20% bottom'
+    }
+  }
+
+)
+gsap.fromTo('#footer-opacity',{
+  opacity: 0,
+  
+}, 
+{
+  opacity: 1, 
+  duration: 1,
+  ease: 'expo',
+  scrollTrigger: {
+    trigger: '#footer-opacity', 
+    start: '20% bottom'
+  }
+}
+
+)
+  },[])
   return (
     <div className="footer">
       <div className="footer-wrapper">
@@ -38,20 +91,20 @@ export default function Footer() {
         <div className="footer-bottom-content">
           <div className="footer-links">
           <a href="http://">
-            <img src={facebook} alt="facebook" />
+            <img id='footer-opacity' src={facebook} alt="facebook" />
           </a>
           <a href="http://">
-            <img src={linkedin} alt="linkedin" />
+            <img id='footer-opacity' src={linkedin} alt="linkedin" />
           </a>
           <a href="http://">
-            <img src={youtube} alt="youtube" />
+            <img id='footer-opacity' src={youtube} alt="youtube" />
           </a>
           <a href="http://">
-            <img src={twitter} alt="twiiter" />
+            <img id='footer-opacity' src={twitter} alt="twiiter" />
           </a>
           </div>
           <div className="reserved">
-        <span>
+        <span id='footer-opacity'>
             © 2024 Creatio. All rights reserved. Free trial terms Privacy Policy GDPR Site Map
           </span>
         </div>
