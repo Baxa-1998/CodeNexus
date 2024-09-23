@@ -106,6 +106,57 @@
 
       }
   }
+  @media screen and (max-width: 1024px){
+    .services-wrapper{
+      width: 90%;
+      .services-marketing{
+        gap: 35px;
+      }
+    }
+
+  }
+  @media screen and (max-width: 900px){
+    .services-wrapper{
+      .services-marketing{
+        flex-direction: column;
+        img{
+          width: 100%;
+        }
+       .services-marketing-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       }
+       .services-marketing-btn{
+       width: 170px;
+       height: 40px;
+       font-size: 16px;
+     
+       }
+       .services-marketing-img{
+        width: 100%;
+      
+       }
+      }
+      .services-application{
+        padding-bottom: 50px;
+        .services-application-img{
+          &::after{
+            position: static;
+          }
+        
+        }
+        .services-application-text-block{
+          .services-application-title{
+            font-size: 26px;
+            transform: translate(0px, -30px) !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 

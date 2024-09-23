@@ -62,4 +62,26 @@
    width: 50%;
    height: 540px;
   }
+  @media screen and (max-width: 1152px) {
+    flex-direction: column;
+    .sport-background{
+      position: static;
+      width: 100%;
+      height: 450px;
+    }
+    .sport-review{
+      width: 100%;
+      border-bottom-right-radius: 0px;
+      height: 450px;
+      .sport-text-container{
+        width: 100%;
+        padding: 15px;
+        .sport-title{
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

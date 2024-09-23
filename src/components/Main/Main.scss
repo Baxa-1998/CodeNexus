@@ -95,8 +95,7 @@
   }
   @media screen and (max-width: 1024px) {
     .main-wrapper{
-padding-left: 15px;
-padding-right: 15px;  
+ 
       .dashboard-img{
       max-width: 400px;
       height: 150px;
@@ -110,9 +109,10 @@ padding-right: 15px;
   }
   @media screen and (max-width: 900px){ 
     border-radius: 0px;
-    padding-left: 15px;
+
     padding-right: 15px;
     min-height: 600px;
+    flex-direction: column;
     .main-wrapper{
       width: 100%;
       .main_text-container{
