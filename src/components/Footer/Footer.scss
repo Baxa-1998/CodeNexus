@@ -74,4 +74,23 @@
  
   
   }
+  @media screen and (max-width: 900px){
+    .footer-wrapper{
+      .footer-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer-left{
+          text-align: center;
+        }
+      }
+
+
+    }
+   .footer-bottom{
+    .footer-bottom-content{
+      flex-direction: column;
+    }
+   }
+  }
 }

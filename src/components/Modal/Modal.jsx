@@ -7,7 +7,7 @@ import React from 'react';
 import Button from '../Button/Button';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
-
+import close from '../../assets/close.png';
 export default function Modal({modal, setModal}) { 
 
   useGSAP(()=>{
@@ -56,6 +56,8 @@ export default function Modal({modal, setModal}) {
       <div className={`layer ${modal ? 'layer-active' : ''}`} onClick={()=> setModal(false)}>
            <div id='fade' className={`modal ${modal ? 'modal-active' : ''}`} onClick={e => e.stopPropagation()}> 
         <div className="modal-wrapper">
+          {modal &&    <img onClick={()=> setModal(false)} src={close} alt="close" /> }
+       
           <h2 className="modal-title">Get a Free Consultation for Your Project</h2>
           <p className="modal-subtitle">
             Talk to an expert and find out what CodeNexus Systems can do for your business

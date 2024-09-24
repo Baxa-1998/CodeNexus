@@ -56,4 +56,37 @@
       }
     }
   }
+  @media screen and (max-width: 1366px){
+    .freedom-items{
+      width: 90%;
+      .freedom-item{
+        height: 650px;
+        h3{ 
+          font-size: 30px;
+        }
+      }
+    }
+    .freedom-title{
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 1152px){
+    .freedom-items{
+     flex-wrap: wrap;
+     gap: 25px;
+     justify-content: center;
+      .freedom-item{
+        width: 500px;
+        height: 500px;
+        h3{ 
+          font-size: 27px;
+        }
+      }
+    }
+    .freedom-title{
+      font-size: 30px;
+    }
+  }
+
+
 }
