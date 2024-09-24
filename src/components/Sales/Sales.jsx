@@ -1,6 +1,6 @@
 
-import salesBackground from '../../assets/Sales-2.png';
-import automateBackground2 from '../../assets/Automate-2.png';
+import salesBackground from '../../assets/Sales-2.webp';
+import automateBackground2 from '../../assets/Automate-2.webp';
 
 import './Sales.scss';
 import Title from '../Title/Title';
