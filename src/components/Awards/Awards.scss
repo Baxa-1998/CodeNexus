@@ -32,7 +32,43 @@
     }
    
   }
+  @media screen and (max-width: 1152px){
+    .awards-wrapper{
+      width: 90%;
+      gap: 50px;
+      .awards-title{
+        font-size: 25px;
+      }
+      .awards-company{
+        .award-items{
+          img{
+            width: 120px;
+
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px){
+    .awards-wrapper{
+      flex-direction: column;
+      .awards-title{
+        text-align: center;
+      }
+      .awards-company{
+        justify-content: center;
+        .award-items{
+          img{
+            width: 80px;
+
+          }
+        }
+      }
+    }
+  }
+
 }
+
 
 
 .show {

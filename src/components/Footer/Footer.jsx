@@ -72,7 +72,7 @@ gsap.fromTo('#footer-opacity',{
                 <li>CodeNexus Systems</li>
               </a>
               <a href="">
-                <li>codenexus@gmail.com</li>
+                <li>nexuscodesystems@gmail.com</li>
               </a>
               <a href="">
                 <li>+1 (904) 793-2100</li>

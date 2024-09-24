@@ -13,10 +13,13 @@
       // height: 700px;
     
       .sales-img{
+        display: flex;
+        justify-content: center;
         position: relative;
         width: 100%;
         img{
-          width: 100%;
+          width: 70%;
+        
         }
 
         &::after{
@@ -155,6 +158,11 @@
           }
         }
           .sales-customer{
+            .sales-img{
+              img{
+                width: 100%;
+              }
+            }
             .sales-text-block{
               .sales-title{
                 text-align: start;
