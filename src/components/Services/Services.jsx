@@ -138,7 +138,7 @@ gsap.fromTo('.services-application-title', {
           <div className="services-marketing-text">
             <Layer>
             <Title id='services-title'>
-              Boost marketing <br /> satisfaction with <br /> streamlined service
+              Boost client <br /> satisfaction through <br /> simplified service processes
             </Title>
             </Layer>
          

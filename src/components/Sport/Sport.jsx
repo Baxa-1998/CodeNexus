@@ -31,11 +31,12 @@ export default function Sport() {
         <div className="sport-text-container">
           <h2 className="sport-title">“BuildTech Solutions”</h2>
           <p className="sport-subtitle">
-            Our company, specializing in the production of building materials, would like to express
-            our sincere gratitude to your team for developing and implementing the CRM system that
-            has significantly streamlined and automated our key business processes. The new system
-            has allowed us to optimize client management, accelerate order processing, and improve
-            communication between production, sales, and logistics departments.
+             Our company would like to extend our sincere gratitude to your team for
+            developing and implementing a CRM system that has truly transformed our business
+            operations. The system has significantly streamlined our processes, helping us optimize
+            client management, accelerate order processing, and enhance communication between our
+            production, sales, and logistics departments. It has made a remarkable difference in the
+            way we operate.
           </p>
           <div className="sport-sign">
             <div className="sport-line"></div>

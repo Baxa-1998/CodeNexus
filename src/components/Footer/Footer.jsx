@@ -80,7 +80,7 @@ gsap.fromTo('#footer-opacity',{
               <a href="">
                 <li>
                   {' '}
-                  USAUSMAN CORPORATION , 10541 63RD DR <br /> FL 2 FOREST HILLS, NY 11375
+                  St. Augustine, FL 32092
                 </li>
               </a>
             </ul>
@@ -89,7 +89,7 @@ gsap.fromTo('#footer-opacity',{
       </div>
       <div className="footer-bottom">
         <div className="footer-bottom-content">
-          <div className="footer-links">
+          {/* <div className="footer-links">
           <a href="http://">
             <img id='footer-opacity' src={facebook} alt="facebook" />
           </a>
@@ -102,7 +102,7 @@ gsap.fromTo('#footer-opacity',{
           <a href="http://">
             <img id='footer-opacity' src={twitter} alt="twiiter" />
           </a>
-          </div>
+          </div> */}
           <div className="reserved">
         <span id='footer-opacity'>
             © 2024 Creatio. All rights reserved. Free trial terms Privacy Policy GDPR Site Map

@@ -25,15 +25,17 @@ export default function Modal({modal, setModal}) {
   )
   },[])
   const [inputValue, setInputValue] = React.useState({
+  
+    fullName: '',
     email: '',
-    company: '',
     phone: '',
+    message: ''
   });
 
   const sendToTelegram = async (data) => {
     const botToken = '7540969717:AAGEb1FQQRoHXt5D4SSMHme_qnsAMRMxWmo';
     const chatId = '563246689';
-    const message = `Email: ${data.email}\nCompany: ${data.company}\nPhone: ${data.phone}`;
+    const message = `Full Name: ${data.fullName}\nEmail: ${data.email}\nPhone: ${data.phone}\nMessage: ${data.message}`;
     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
       message,
     )}`;
@@ -64,33 +66,42 @@ export default function Modal({modal, setModal}) {
           </p>
           <form onSubmit={handleSubmit} action="">
             {/* <label htmlFor="">BUSSINES EMAIL*</label> */}
-            <label htmlFor="bussines email">BUSSINES EMAIL*</label>
+            <label htmlFor="bussines email">Full Name*</label>
+            <input
+              onChange={(e) => setInputValue({ ...inputValue, fullName: e.target.value })}
+              value={inputValue.fullName}
+              id="bussines email"
+              className="modal-input"
+              type='text'
+              required
+            />
+            <label htmlFor="company">Email*</label>
             <input
               onChange={(e) => setInputValue({ ...inputValue, email: e.target.value })}
               value={inputValue.email}
-              id="bussines email"
+              id="company"
               className="modal-input"
+              label="Email*"
               type="email"
               required
             />
-            <label htmlFor="company">COMPANY*</label>
-            <input
-              onChange={(e) => setInputValue({ ...inputValue, company: e.target.value })}
-              value={inputValue.company}
-              id="company"
-              className="modal-input"
-              label="COMPANY*"
-              type="text"
-              required
-            />
-            <label htmlFor="fdsa">PHONE</label>
+            <label htmlFor="phone">PHONE</label>
            
               <PhoneInput
                 inputStyle={{ width: '100%', height: '45px', border: '1px solid #303030' }}
                 value={inputValue.phone}
                 onChange={(value) => setInputValue({ ...inputValue, phone: value })}
-                country={'uz'}
+                country={'us'}
               />
+              <label htmlFor='message'>Message*</label>
+              <input
+              onChange={(e) => setInputValue({ ...inputValue, message: e.target.value })}
+              value={inputValue.message}
+              id="message"
+              className="modal-input"
+              type='text'
+              
+            />
           
             {/* <Select placeholder='' options={options}/> */}
             {/* <button type='submit'>send</button> */}

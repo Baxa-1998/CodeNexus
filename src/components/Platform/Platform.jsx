@@ -8,7 +8,7 @@ import marketing from '../../assets/platform/5.png';
 import target from '../../assets/platform/6.png';
 import logo2 from '../../assets/logo2-black.png';
 import Button from '../Button/Button';
-import gsap from 'gsap'
+import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Layer from '../Layer/Layer';
 import { ScrollTrigger } from 'gsap/all';
@@ -50,53 +50,52 @@ const awards = [
   },
 ];
 
-export default function Platform({setModal}) {
-  useGSAP(()=>{
-    gsap.to('.platform-left-item',{
-      opacity: 1,
-      duration: 0.5, 
-      ease: 'power3', 
-      scrollTrigger: {
-        trigger: '.platform-left-item',
-        start : 'bottom bottom'
-      },
-
-      stagger: {
-        amount: 1
-      }
-    },
-    // {
-    //   opacity: 1,
-    //   duration: 1,
-    //   stagger: {
-    //     amount: 0.5,
-    //   }
-    // }
-  
-    )
-    gsap.fromTo('.platform-right-title-block',
-      {x: 1000},
+export default function Platform({ setModal }) {
+  useGSAP(() => {
+    gsap.to(
+      '.platform-left-item',
       {
-      x: 0,
-      duration: 0.5, 
-      ease: 'power3', 
-      scrollTrigger: {
-        trigger: '.platform-right-title-block',
-        start : 'bottom bottom'
-      },
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power3',
+        scrollTrigger: {
+          trigger: '.platform-left-item',
+          start: 'bottom bottom',
+        },
 
-      
-    },
-    // {
-    //   opacity: 1,
-    //   duration: 1,
-    //   stagger: {
-    //     amount: 0.5,
-    //   }
-    // }
-  
-    )
-  },[])
+        stagger: {
+          amount: 1,
+        },
+      },
+      // {
+      //   opacity: 1,
+      //   duration: 1,
+      //   stagger: {
+      //     amount: 0.5,
+      //   }
+      // }
+    );
+    gsap.fromTo(
+      '.platform-right-title-block',
+      { x: 1000 },
+      {
+        x: 0,
+        duration: 0.5,
+        ease: 'power3',
+        scrollTrigger: {
+          trigger: '.platform-right-title-block',
+          start: 'bottom bottom',
+        },
+      },
+      // {
+      //   opacity: 1,
+      //   duration: 1,
+      //   stagger: {
+      //     amount: 0.5,
+      //   }
+      // }
+    );
+  }, []);
 
   return (
     <div className="platform">
@@ -104,18 +103,12 @@ export default function Platform({setModal}) {
       <div className="platform-wrapper">
         <div className="platform-left">
           <div className="platform-left-items">
-          
-                {awards.map((item) => (
-                
-                         <div key={item.id} className="platform-left-item">
+            {awards.map((item) => (
+              <div key={item.id} className="platform-left-item">
                 {item.img ? <img src={item.img} alt="platform" /> : <p>{item.title}</p>}
                 <h4>{item.text}</h4>
               </div>
-                   
-           
             ))}
-      
-          
 
             {/* <div className="platform-left-item"></div>
           <div className="platform-left-item"></div>
@@ -128,14 +121,17 @@ export default function Platform({setModal}) {
         <div className="platform-right">
           <div className="platform-right-title-block">
             <h3 className="platform-right-title">
-              Stay in control <br /> thanks to CodeNexus Sytems composable pricing model
+              Tale control of <br /> your business with CodeNexus Systems' flexible pricing model.
             </h3>
             <p className="platform-right-subtitle">
-              Create your unique CRM solution by selecting only the applications your business truly
-              needs. Don’t overpay for functionalities you’re not going to use and focus on what
-              really matters for your business growth.
+              Design a custom CRM by selecting only the features that meet your unique needs.
+              Eliminate unnecessary costs and focus on the tools that drive growth and efficiency.
+              With a tailored solution, you'll streamline operations and accelerate business success
+              on your terms.
             </p>
-            <Button onClick={()=> setModal(true)} className={'platform-right-btn'}>Get a consultation</Button>
+            <Button onClick={() => setModal(true)} className={'platform-right-btn'}>
+              Get a consultation
+            </Button>
           </div>
         </div>
       </div>
