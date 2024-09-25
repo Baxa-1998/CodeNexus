@@ -34,14 +34,19 @@ export default function Modal({modal, setModal}) {
 
   const sendToTelegram = async (data) => {
     const botToken = '7540969717:AAGEb1FQQRoHXt5D4SSMHme_qnsAMRMxWmo';
-    const chatId = '563246689';
+    const chatId = ['57844596', '503118393', '563246689'];
     const message = `Full Name: ${data.fullName}\nEmail: ${data.email}\nPhone: ${data.phone}\nMessage: ${data.message}`;
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
-      message,
-    )}`;
+
+    const promises = chatId.map((chatId)=>{
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+        message,
+      )}`;
+      return fetch(url)
+    })
+  
 
     try {
-      await fetch(url);
+      await Promise.all(promises);
       alert('Message sent to Telegram');
     } catch (error) {
       console.error(error);
@@ -52,6 +57,7 @@ export default function Modal({modal, setModal}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendToTelegram(inputValue);
+    setInputValue({fullName:'', email: '', phone: '', message: ''})
   };
 
   return (
