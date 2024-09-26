@@ -145,7 +145,7 @@ gsap.fromTo('.sales-automate-img', {
             <Title className={'text-fade'}>Automate complex <br /> sales processes</Title>
             </Layer>
            <Layer>
-           <button onClick={()=>setModal(true)} className='sales-btn'>Get a consultation</button>
+           <button onClick={()=>setModal(true)} className='sales-btn'> Get in touch</button>
            </Layer>
           
           </div>

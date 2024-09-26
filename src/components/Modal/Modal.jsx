@@ -1,35 +1,31 @@
-import { createTheme, ThemeProvider } from '@mui/material';
+
 import './Modal.scss';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 // import Select from 'react-select'
 import React from 'react';
 import Button from '../Button/Button';
-import gsap from 'gsap'
+import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import close from '../../assets/close.png';
-export default function Modal({modal, setModal}) { 
-
-  useGSAP(()=>{
-    gsap.fromTo('#fade', {
-     
-      opacity: 0
-    }, 
-    {
-    
-      opacity: 1, 
-      duration: 1,
-     
-
-    }
-  )
-  },[])
+export default function Modal({ modal, setModal }) {
+  useGSAP(() => {
+    gsap.fromTo(
+      '#fade',
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+      },
+    );
+  }, []);
   const [inputValue, setInputValue] = React.useState({
-  
     fullName: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
   });
 
   const sendToTelegram = async (data) => {
@@ -37,13 +33,12 @@ export default function Modal({modal, setModal}) {
     const chatId = ['57844596', '503118393', '563246689'];
     const message = `Full Name: ${data.fullName}\nEmail: ${data.email}\nPhone: ${data.phone}\nMessage: ${data.message}`;
 
-    const promises = chatId.map((chatId)=>{
+    const promises = chatId.map((chatId) => {
       const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
         message,
       )}`;
-      return fetch(url)
-    })
-  
+      return fetch(url);
+    });
 
     try {
       await Promise.all(promises);
@@ -57,18 +52,21 @@ export default function Modal({modal, setModal}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendToTelegram(inputValue);
-    setInputValue({fullName:'', email: '', phone: '', message: ''})
+    setInputValue({ fullName: '', email: '', phone: '', message: '' });
   };
 
   return (
-      <div className={`layer ${modal ? 'layer-active' : ''}`} onClick={()=> setModal(false)}>
-           <div id='fade' className={`modal ${modal ? 'modal-active' : ''}`} onClick={e => e.stopPropagation()}> 
+    <div className={`layer ${modal ? 'layer-active' : ''}`} onClick={() => setModal(false)}>
+      <div
+        id="fade"
+        className={`modal ${modal ? 'modal-active' : ''}`}
+        onClick={(e) => e.stopPropagation()}>
         <div className="modal-wrapper">
-          {modal &&    <img onClick={()=> setModal(false)} src={close} alt="close" /> }
-       
-          <h2 className="modal-title">Get a Free Consultation for Your Project</h2>
+          {modal && <img onClick={() => setModal(false)} src={close} alt="close" />}
+
+          <h2 className="modal-title">Receive a Free Project Consultation</h2>
           <p className="modal-subtitle">
-            Talk to an expert and find out what CodeNexus Systems can do for your business
+          Consult with an expert to understand how CodeNexus Systems can transform and drive success for your business.
           </p>
           <form onSubmit={handleSubmit} action="">
             {/* <label htmlFor="">BUSSINES EMAIL*</label> */}
@@ -78,7 +76,7 @@ export default function Modal({modal, setModal}) {
               value={inputValue.fullName}
               id="bussines email"
               className="modal-input"
-              type='text'
+              type="text"
               required
             />
             <label htmlFor="company">Email*</label>
@@ -92,37 +90,33 @@ export default function Modal({modal, setModal}) {
               required
             />
             <label htmlFor="phone">PHONE</label>
-           
-              <PhoneInput
-                inputStyle={{ width: '100%', height: '45px', border: '1px solid #303030' }}
-                value={inputValue.phone}
-                onChange={(value) => setInputValue({ ...inputValue, phone: value })}
-                country={'us'}
-              />
-              <label htmlFor='message'>Message*</label>
-              <input
+
+            <PhoneInput
+              inputStyle={{ width: '100%', height: '45px', border: '1px solid #303030' }}
+              value={inputValue.phone}
+              onChange={(value) => setInputValue({ ...inputValue, phone: value })}
+              country={'us'}
+            />
+            <label htmlFor="message">Message*</label>
+            <input
               onChange={(e) => setInputValue({ ...inputValue, message: e.target.value })}
               value={inputValue.message}
               id="message"
               className="modal-input"
-              type='text'
-              
+              type="text"
             />
-          
+
             {/* <Select placeholder='' options={options}/> */}
             {/* <button type='submit'>send</button> */}
-            <Button type="submit" className={'input-btn'} >GET NOW</Button>
-            <span className='modal-policy'>
-              By submitting this form, you confirm that you agree to the storing and processing of
-              your personal data by CodeNexus Systems
-           
+            <Button type="submit" className={'input-btn'}>
+              Contact us
+            </Button>
+            <span className="modal-policy">
+              By submitting, you agree we can use your details to contact you
             </span>
           </form>
         </div>
       </div>
-
-      </div>
-   
-  
+    </div>
   );
 }

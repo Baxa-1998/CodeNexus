@@ -143,7 +143,7 @@ gsap.fromTo('.services-application-title', {
             </Layer>
          
             <Button onClick={() => setModal(true)} className={'services-marketing-btn'}>
-              Get a consultation
+            Book a free consultation
             </Button>
           </div>
           <div className="services-marketing-img">

@@ -121,7 +121,7 @@ export default function Platform({ setModal }) {
         <div className="platform-right">
           <div className="platform-right-title-block">
             <h3 className="platform-right-title">
-              Tale control of <br /> your business with CodeNexus Systems' flexible pricing model.
+              Take control of <br /> your business with CodeNexus Systems' flexible pricing model.
             </h3>
             <p className="platform-right-subtitle">
               Design a custom CRM by selecting only the features that meet your unique needs.
@@ -130,7 +130,7 @@ export default function Platform({ setModal }) {
               on your terms.
             </p>
             <Button onClick={() => setModal(true)} className={'platform-right-btn'}>
-              Get a consultation
+            Get in touch
             </Button>
           </div>
         </div>
