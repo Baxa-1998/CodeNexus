@@ -52,8 +52,7 @@ const awards = [
 
 export default function Platform({ setModal }) {
   useGSAP(() => {
-    gsap.to(
-      '.platform-left-item',
+    gsap.to( '.platform-left-item',
       {
         opacity: 1,
         duration: 0.5,

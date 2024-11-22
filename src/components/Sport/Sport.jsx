@@ -20,7 +20,7 @@ export default function Sport() {
 
         scrollTrigger: {
           trigger: '.sport-text-container',
-          start: 'top center',
+          start: '20% bottom',
         },
       },
     );
